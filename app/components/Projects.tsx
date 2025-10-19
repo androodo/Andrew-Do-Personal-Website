@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
@@ -31,30 +31,35 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 section-title">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-4xl font-bold text-gray-900 mb-16 section-title">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-200"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-200 card-hover group"
             >
-              <div className="relative h-48 overflow-hidden bg-gray-100">
+              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-blue-50 to-gray-50">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="p-7">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-5 text-sm leading-relaxed line-clamp-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, i) => (
-                    <span key={i} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full font-medium">
+                    <span
+                      key={i}
+                      className="text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full font-semibold border border-blue-100"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -63,10 +68,11 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors group/link"
                 >
-                  View on GitHub
-                  <ExternalLink className="w-4 h-4" />
+                  <Github className="w-5 h-5" />
+                  <span>View on GitHub</span>
+                  <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
