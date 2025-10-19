@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Andrew Do - CS Student at UCR",
   description: "Personal website of Andrew Do, a Computer Science student at the University of California, Riverside",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-gray-900 text-gray-100`}>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-gray-50 text-gray-900`}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
@@ -27,4 +28,3 @@ export default function RootLayout({
     </html>
   )
 }
-

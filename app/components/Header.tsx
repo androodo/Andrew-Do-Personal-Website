@@ -9,17 +9,17 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-gray-800 text-gray-100 py-4 sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30">
-      <nav className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold glow">
+    <header className="bg-white shadow-sm sticky top-0 z-10 border-b border-gray-200">
+      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <Link href="/" className="text-xl font-bold text-blue-600">
           Andrew Do
         </Link>
         <ul className="flex space-x-6">
-          {["About", "Projects", "Skills", "Contact"].map((item) => (
+          {["About", "Experience", "Projects", "Skills", "Contact"].map((item) => (
             <li key={item}>
               <button
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="hover:text-teal-300 transition-colors duration-200 cursor-pointer"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 cursor-pointer font-medium"
               >
                 {item}
               </button>
@@ -30,4 +30,3 @@ export default function Header() {
     </header>
   )
 }
-
