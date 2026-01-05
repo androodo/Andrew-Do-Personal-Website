@@ -3,10 +3,26 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
+    title: "CardSense",
+    description:
+      "Built a full-stack financial management platform that optimizes credit card rewards and tracks budgets, helping users maximize cashback by up to 25% on everyday purchases. Developed a Django REST API with 45+ endpoints for transaction processing and budget analytics. Implemented CSV import functionality reducing manual transaction entry time by 80%, with a React frontend that processes 1000+ transactions per user with sub-second response times.",
+    image: "/images/cardsense-logo.png",
+    link: "https://github.com/androodo/CardSense",
+    tech: ["Python", "Django", "React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Pandas", "scikit-learn"],
+  },
+  {
+    title: "R'Mart",
+    description:
+      "Built a university exclusive secondhand marketplace with 500+ users. Implemented JWT authentication, real-time messaging with WebSockets, listing recommendations, and search functionality. Hardened and scaled with encryption, Redis caching and rate limits, and protections for XSS, CSRF, DDoS, and SQL injection. Added AI search using Meilisearch plus OpenAI embeddings for fuzzy match and autocomplete.",
+    image: "/images/rmart-logo.png",
+    link: "https://github.com/androodo/R-mart",
+    tech: ["React", "Node.js", "Express", "PostgreSQL", "AWS", "Docker", "Redis", "WebSockets"],
+  },
+  {
     title: "Highlander Health",
     description:
       "Built a full-stack nutrition website offering custom daily meal plans based on UCR Dining Hall menus. Developed a Python/Flask backend with OpenAI GPT API for real-time data analysis. Employed Beautiful Soup to scrape daily cafeteria menus and harnessed Pandas for thorough data cleaning, delivering personalized nutrition guidance to over 100 UCR students.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UCR-bear-3hDzhuNrqcrqXKindNIoeQAK9x3prU.png",
+    image: "/images/ucr-bear.png",
     link: "https://github.com/androodo/HighlanderHealth",
     tech: ["Python", "Flask", "OpenAI GPT", "Beautiful Soup", "Pandas"],
   },
@@ -14,8 +30,7 @@ const projects = [
     title: "Soccer Score Predictor",
     description:
       "Developed a robust machine learning application to predict soccer match outcomes with a 15% improvement in prediction accuracy by leveraging comprehensive historical player statistics and detailed team performance data. Designed a user-friendly web interface for real-time prediction display with configurable visualization options.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soccer%20ball.jpg-qOnpJGqIpW9fDtnPhVIii4OjCiyqrF.jpeg",
+    image: "/images/soccer-20ball.jpeg",
     link: "https://github.com/androodo/Soccer-Score-Predictor",
     tech: ["Python", "scikit-learn", "Pandas", "HTML", "CSS", "JavaScript"],
   },
@@ -23,7 +38,7 @@ const projects = [
     title: "LocaInsight",
     description:
       "Built a full-stack travel application that generates personalized itineraries with comprehensive data validation, seamless third-party API integration, robust caching mechanisms, and optimized response times. Added robust error handling and response caching to improve reliability and reduce API response time by 20%.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/globe.jpg-QOELU7buQpXR6AMdZG6xcphL0HX8CA.jpeg",
+    image: "/images/globe.jpeg",
     link: "https://github.com/androodo/LocaInsight",
     tech: ["React", "Node.js", "Express", "Google Maps API", "Axios", "OpenAI GPT"],
   },
