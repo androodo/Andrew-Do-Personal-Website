@@ -7,12 +7,22 @@ const experiences = [
     company: "Panasonic Avionics Corporation",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6ixDBsBMM3fz48ZmnAAkW0E5uhBglE.png",
     location: "Irvine, CA",
+    period: "Jun. 2026 – Sep. 2026",
+    achievements: [
+      "Owned a first-of-its-kind hybrid virtual rack CI workflow extending physical Intel NUC-based rack testing with AWS/Kubernetes-backed virtual servers, reducing repeated environment setup time by an estimated 60%.",
+      "Engineered GitLab CI/CD automation using Python, Bash, YAML, Docker, and pytest to generate rack configurations, deploy builds, run smoke/regression suites, and gate promotion through a 3-stage virtual-to-physical validation hierarchy.",
+      "Built an AI-assisted CI failure triage layer using LangChain, OpenAI LLMs, embeddings/RAG, JUnit/log parsing, and JIRA APIs to retrieve similar failures, classify root causes, summarize logs, and create actionable tickets, reducing manual debugging effort by an estimated 70%.",
+    ],
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Panasonic Avionics Corporation",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6ixDBsBMM3fz48ZmnAAkW0E5uhBglE.png",
+    location: "Irvine, CA",
     period: "Jun. 2025 – Sep. 2025",
     achievements: [
-      "Designed and Docker-containerized a Python-based satellite-modem simulator (Flask REST API, OpenAMIP, MQTT) and deployed it via GitLab CI/CD to AWS Vrack, replacing $500k physical modems per test rack, slashing capital spend, and enabling fully automated integration testing across multiple aircraft-connectivity platforms.",
-      "Implemented a full, secure, scalable REST interface—auth, configuration, and live-status endpoints—powering one-click CI automation and shrinking test-environment setup from hours to minutes.",
-      "Added OpenAMIP and MQTT messaging layers with a realistic initialization state machine that streams heartbeats, location, and status updates, boosting test fidelity and cutting flaky failures by 70%.",
-      "Partnered closely with cross-functional hardware, network, and QA teams to seamlessly embed the virtual modem in inflight-connectivity pipelines, doubling concurrent integration-test throughput across the entire lab environment.",
+      "Designed and Dockerized a Python-based satellite modem simulator for distributed integration testing, exposing REST APIs, MQTT pub/sub, and programmable device states to reduce dependence on physical hardware.",
+      "Deployed simulator services through GitLab CI/CD on AWS with structured logs, telemetry, and repeatable initialization workflows, cutting manual test environment setup from hours to minutes.",
     ],
   },
   {
@@ -22,10 +32,8 @@ const experiences = [
     location: "San Francisco, CA",
     period: "Feb. 2025 – Apr. 2025",
     achievements: [
-      "Developed features using Figma, TypeScript, React, Express, and MongoDB; optimized user matching with MongoDB filters to cut OpenAI API costs by 20% and improve match quality by 15%.",
-      "Engineered user onboarding and the first monetized feature in close collaboration with the founder.",
-      "Implemented AI-driven persona-matching with LangGraph and LangChain, enhancing decision-making accuracy.",
-      "Designed and implemented scalable RESTful APIs and built a responsive, component-driven UI using React, TypeScript, and Tailwind CSS, significantly optimizing user interactions and cross-device interface responsiveness.",
+      "Built a production LLM agent matching service with LangGraph, LangChain, Azure OpenAI, tool calling, memory, embeddings, eval harnesses, and guardrails, improving match quality by 15%.",
+      "Owned backend and frontend systems for onboarding and paid subscriptions using React, TypeScript, Express, and PostgreSQL; reduced median LLM response latency by 35% through caching, batching, and streaming.",
     ],
   },
 ]
