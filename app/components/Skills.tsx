@@ -5,11 +5,36 @@ const skillCategories = [
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Express.js", "Flask", "scikit-learn", "Pandas", "Beautiful Soup"],
+    skills: ["React", "Node.js", "Express.js", "Flask", "scikit-learn", "Pandas", "Beautiful Soup", "pytest"],
+  },
+  {
+    category: "AI Engineering",
+    skills: [
+      "OpenAI API",
+      "Azure OpenAI",
+      "LangChain",
+      "LangGraph",
+      "LLM Agents",
+      "Embeddings",
+      "RAG",
+      "Evals",
+      "Prompt Engineering",
+    ],
   },
   {
     category: "Tools & Technologies",
-    skills: ["Docker", "GitLab CI/CD", "AWS Vrack", "MongoDB", "REST APIs", "Git", "Jira", "Jupyter Notebook"],
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "GitLab CI/CD",
+      "AWS Vrack",
+      "MongoDB",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Jira",
+      "Jupyter Notebook",
+    ],
   },
   {
     category: "Concepts & Protocols",

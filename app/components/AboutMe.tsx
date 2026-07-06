@@ -39,7 +39,7 @@ export default function AboutMe() {
               <span className="font-medium">doandrew21@gmail.com</span>
             </a>
             <a
-              href="https://linkedin.com/in/andrew-do-93b14b17a/"
+              href="https://www.linkedin.com/in/andrew-k-do/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors group"
@@ -62,8 +62,7 @@ export default function AboutMe() {
             <p className="text-lg leading-relaxed">
               I'm currently pursuing an{" "}
               <strong className="text-gray-900">Accelerated B.S. + M.S. in Computer Science</strong> at the University
-              of California, Riverside, expected to graduate in June 2027. I'm passionate about software engineering,
-              machine learning, and building scalable solutions.
+              of California, Riverside!
             </p>
             <p className="text-lg leading-relaxed">
               As <strong className="text-gray-900">Head of Technical Projects</strong> at the Quant Club and a{" "}
