@@ -30,7 +30,7 @@ export default function Header() {
           Andrew Do
         </Link>
         <ul className="flex space-x-8">
-          {["About", "Experience", "Projects", "Skills", "Contact"].map((item) => (
+          {["About", "Experience", "Projects", "Skills"].map((item) => (
             <li key={item}>
               <button
                 onClick={() => scrollToSection(item.toLowerCase())}

@@ -19,6 +19,14 @@ const projects = [
     tech: ["React", "Node.js", "Express", "PostgreSQL", "AWS", "Docker", "Redis", "WebSockets"],
   },
   {
+    title: "AI Song Remixer",
+    description:
+      "An AI-powered web application that takes an MP3 song, separates it into vocal and instrumental stems, applies a style transfer effect (Lofi, Jazz, or Dubstep) to the instrumental, and then merges the vocals back in to produce a remixed version of the original song.",
+    image: "/images/ai-song-remixer.png",
+    link: "https://github.com/androodo/AI-Song-Remixer",
+    tech: ["Python", "PyTorch", "Demucs", "Librosa", "React", "Flask"],
+  },
+  {
     title: "Highlander Health",
     description:
       "Built a full-stack nutrition website offering custom daily meal plans based on UCR Dining Hall menus. Developed a Python/Flask backend with OpenAI GPT API for real-time data analysis. Employed Beautiful Soup to scrape daily cafeteria menus and harnessed Pandas for thorough data cleaning, delivering personalized nutrition guidance to over 100 UCR students.",
