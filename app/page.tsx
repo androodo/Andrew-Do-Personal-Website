@@ -5,7 +5,7 @@ import Skills from "./components/Skills"
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="overflow-hidden bg-background">
       <AboutMe />
       <Experience />
       <Projects />
