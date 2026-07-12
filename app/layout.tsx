@@ -1,28 +1,26 @@
 import "./globals.css"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import type React from "react"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: "Andrew Do - CS Student at UCR",
-  description: "Personal website of Andrew Do, a Computer Science student at the University of California, Riverside",
-    generator: 'v0.app'
+  title: "Andrew Do | Software Engineer",
+  description: "Andrew Do is a Computer Science student at UC Riverside building AI, infrastructure, and full-stack products.",
+  generator: "v0.app",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const viewport: Viewport = { themeColor: "#08101f", width: "device-width", initialScale: 1 }
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-gray-50 text-gray-900`}>
+    <html lang="en" className="bg-background">
+      <body className={`${inter.className} min-h-screen bg-background font-sans text-foreground antialiased`}>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

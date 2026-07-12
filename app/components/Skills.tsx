@@ -1,76 +1,18 @@
+import { Braces, BrainCircuit, Code2, Network, Wrench } from "lucide-react"
+
 const skillCategories = [
-  {
-    category: "Programming Languages",
-    skills: ["Python", "C++", "TypeScript", "JavaScript", "Java", "R", "HTML/CSS", "Bash"],
-  },
-  {
-    category: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Express.js", "Flask", "scikit-learn", "Pandas", "Beautiful Soup", "pytest"],
-  },
-  {
-    category: "AI Engineering",
-    skills: [
-      "OpenAI API",
-      "Azure OpenAI",
-      "LangChain",
-      "LangGraph",
-      "LLM Agents",
-      "Embeddings",
-      "RAG",
-      "Evals",
-      "Prompt Engineering",
-    ],
-  },
-  {
-    category: "Tools & Technologies",
-    skills: [
-      "Docker",
-      "Kubernetes",
-      "GitLab CI/CD",
-      "AWS Vrack",
-      "MongoDB",
-      "SQL",
-      "REST APIs",
-      "Git",
-      "Jira",
-      "Jupyter Notebook",
-    ],
-  },
-  {
-    category: "Concepts & Protocols",
-    skills: ["Containerization", "CI/CD Pipelines", "MQTT", "OpenAMIP", "TCP/IP", "UDP", "Agile Methodologies"],
-  },
+  { category: "Programming Languages", icon: Code2, skills: ["Python", "C++", "TypeScript", "JavaScript", "Java", "R", "HTML/CSS", "Bash"] },
+  { category: "Frameworks & Libraries", icon: Braces, skills: ["React", "Node.js", "Express.js", "Flask", "scikit-learn", "Pandas", "Beautiful Soup", "pytest"] },
+  { category: "AI Engineering", icon: BrainCircuit, skills: ["OpenAI API", "Azure OpenAI", "LangChain", "LangGraph", "LLM Agents", "Embeddings", "RAG", "Evals", "Prompt Engineering"] },
+  { category: "Tools & Technologies", icon: Wrench, skills: ["Docker", "Kubernetes", "GitLab CI/CD", "AWS Vrack", "MongoDB", "SQL", "REST APIs", "Git", "Jira", "Jupyter Notebook"] },
+  { category: "Concepts & Protocols", icon: Network, skills: ["Containerization", "CI/CD Pipelines", "MQTT", "OpenAMIP", "TCP/IP", "UDP", "Agile Methodologies"] },
 ]
 
 export default function Skills() {
-  return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-16 section-title">Technical Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                {category.category}
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="bg-gray-50 text-gray-700 px-4 py-2 rounded-lg text-sm font-semibold border border-gray-200 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50 transition-all cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="skills" className="border-t border-border bg-card/25 py-24"><div className="mx-auto max-w-7xl px-4 md:px-6">
+    <div className="mb-12"><p className="section-label mb-3">capabilities.json</p><h2 className="section-title text-4xl font-bold tracking-tight md:text-5xl">Technical Skills</h2></div>
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6">
+      {skillCategories.map((category, index) => { const Icon = category.icon; return <article key={category.category} className={`glass-panel rounded-2xl p-6 transition-all hover:border-primary/50 ${index < 2 ? "lg:col-span-3" : "lg:col-span-2"}`}><div className="mb-6 flex items-center justify-between"><div className="flex items-center gap-3"><span className="grid size-10 place-items-center rounded-lg bg-primary/15 text-primary"><Icon className="size-5" /></span><h3 className="font-bold text-foreground">{category.category}</h3></div><span className="font-mono text-xs text-muted-foreground">{String(category.skills.length).padStart(2, "0")}</span></div><div className="flex flex-wrap gap-2">{category.skills.map((skill) => <span key={skill} className="rounded-lg border border-border bg-background/50 px-3 py-2 font-mono text-xs text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-accent/60 hover:text-accent">{skill}</span>)}</div></article> })}
+    </div>
+  </div></section>
 }
