@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowDown, Github, Linkedin, Mail, MapPin, Phone, Terminal } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, MapPin, Terminal } from "lucide-react"
 
 const actions = [
   { label: "Email", href: "mailto:doandrew21@gmail.com", icon: Mail },
@@ -24,7 +24,6 @@ export default function AboutMe() {
                   <Icon className="size-4 text-primary" />{label}
                 </a>
               ))}
-              <a href="tel:+16573529910" className="inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground"><Phone className="size-4" />(657) 352-9910</a>
             </div>
             <a href="#experience" className="mt-10 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-primary">Explore my work <ArrowDown className="size-4" /></a>
           </div>
